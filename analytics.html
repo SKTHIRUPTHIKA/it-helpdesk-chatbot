@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h2>Ticket Analytics</h2>
+
+<canvas id="categoryChart" width="400" height="200"></canvas>
+
+<script>
+const categoryLabels = {{ category_data | map(attribute=0) | list | safe }};
+const categoryValues = {{ category_data | map(attribute=1) | list | safe }};
+
+new Chart(document.getElementById("categoryChart"), {
+    type: "bar",
+    data: {
+        labels: categoryLabels,
+        datasets: [{
+            label: "Tickets by Category",
+            data: categoryValues,
+            backgroundColor: "#2563eb"
+        }]
+    }
+});
+</script>
+
+</body>
+</html>

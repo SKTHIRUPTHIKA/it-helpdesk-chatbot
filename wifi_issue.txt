@@ -1,0 +1,15 @@
+Issue: WiFi not working
+
+Symptoms:
+- WiFi not connecting
+- Internet not working
+- Network issue
+- Slow internet
+
+Troubleshooting Steps:
+1. Turn OFF airplane mode
+2. Restart your WiFi router and modem
+3. Forget the WiFi network and reconnect
+4. Check if other devices can connect
+5. Update or reinstall network drivers
+6. If still not working, contact IT support

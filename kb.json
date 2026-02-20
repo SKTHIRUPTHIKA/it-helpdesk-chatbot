@@ -1,0 +1,20 @@
+{
+  "wifi issue": "Restart the router, check airplane mode, reconnect Wi-Fi.",
+  "wifi not working": "Restart router and laptop, forget Wi-Fi and reconnect.",
+  "slow internet": "Check background downloads and restart the router.",
+
+  "password reset": "Reset password using the self-service portal.",
+  "account locked": "Wait 15 minutes or contact IT to unlock your account.",
+
+  "email problem": "Logout and login again. Check internet connection.",
+  "outlook not opening": "Restart Outlook and run repair from Control Panel.",
+
+  "printer issue": "Check printer power and reconnect the printer cable.",
+  "printer not working": "Restart printer and reinstall drivers.",
+
+  "vpn not connecting": "Check internet and restart VPN client.",
+  "vpn issue": "Ensure correct credentials and stable internet.",
+
+  "blue screen": "Restart system and inform IT if it repeats.",
+  "laptop overheating": "Shut down, clean vents, avoid soft surfaces."
+}

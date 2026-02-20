@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT Helpdesk Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6f7bf7, #7b5fc7);
+    }
+
+    .main {
+      display: flex;
+      height: 100vh;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .chat {
+      flex: 3;
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-box {
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+
+    .user { text-align: right; margin: 5px; }
+    .bot { text-align: left; margin: 5px; }
+
+    .user span {
+      background: #4f46e5;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 12px;
+    }
+
+    .bot span {
+      background: #e5e7eb;
+      padding: 6px 12px;
+      border-radius: 12px;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 8px;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 8px;
+    }
+
+    .dashboard {
+      flex: 1;
+      background: #f2f3f7;
+      border-radius: 12px;
+      padding: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<div class="main">
+
+  <!-- CHAT -->
+  <div class="chat">
+    <h2>🤖 IT Helpdesk Chatbot</h2>
+
+    <div class="chat-box">
+      {% for msg in chat %}
+        <div class="user"><span>{{ msg.user }}</span></div>
+        <div class="bot"><span>{{ msg.bot }}</span></div>
+      {% endfor %}
+    </div>
+
+    <form method="POST" class="input-area">
+      <input type="text" name="message" placeholder="Type your issue..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard">
+    <h3>📊 Helpdesk Dashboard</h3>
+
+    <div class="card">Total Tickets<br><b>{{ stats.total }}</b></div>
+    <div class="card">Open Tickets<br><b>{{ stats.open }}</b></div>
+    <div class="card">Resolved Tickets<br><b>{{ stats.resolved }}</b></div>
+
+    <div class="card">
+      <b>Categories</b><br><br>
+      🌐 Network: {{ stats.network }}<br>
+      💻 Software: {{ stats.software }}<br>
+      🖥️ Hardware: {{ stats.hardware }}<br>
+      ❓ Other: {{ stats.other }}
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
